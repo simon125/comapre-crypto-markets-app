@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+
+        <div class="row ">
+            <div class="col-md-4 ">
+                <div class="card card-body h-100 sticky-top mx-4 calculator ">
+                    <form class="m-0">
+                        <div class="form-group">
+                            <select class="form-control" name="cryptoName" id="cryptoName">
+                                <option value="1">Choose name of crypto</option>
+                                <option value="2">Option</option>
+                                <option value="3">Option</option>
+                                <option value="4">Option</option>
+                                <option value="5">Option</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cryptoPrice">Price</label>
+                            <input id="cryptoPrice" type="text" placeholder="Enter name of crypto..." class="form-control form-control-lg">
+                        </div>
+                        <div class="form-group">
+                            <label for="cryptoAmount">Amount</label>
+                            <input id="cryptoAmount" type="text" placeholder="Enter name of crypto..." class="form-control form-control-lg">
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <p class="lead text-center">TOTAL IN BTC</p>
+                        <div class="form-group">
+
+                            <input type="text" placeholder="Enter name of crypto..." class="form-control form-control-lg">
+                        </div>
+                        <button class="btn btn-dark btn-block btn-lg">Calculate</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-8 bg-dark">
+                <div class="jumbotron py-3 mt-4 d-flex justify-content-between border sticky-top">
+                    <div id="marketChoice" class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input name="marketChoice" value="Both" type="radio" checked autocomplete="off"> Both
+                        </label>
+                        <label class="btn btn-primary">
+                            <input name="marketChoice" value="BitBay" type="radio" autocomplete="off"> BitBay
+                        </label>
+                        <label class="btn btn-primary">
+                            <input name="marketChoice" value="Bitmarket" type="radio" autocomplete="off"> Bitmarket
+                        </label>
+                    </div>
+                    <div id="groups" class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-primary">
+                            <input type="checkbox" autocomplete="off"> Bookmarked
+                        </label>
+                        <label class="btn btn-primary active">
+                            <input type="checkbox" autocomplete="off"> Every
+                        </label>
+                    </div>
+                    <div id="sortMethods" class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-primary">
+                            <input type="checkbox" autocomplete="off"> Rosnąco
+                        </label>
+                        <label class="btn btn-primary active">
+                            <input type="checkbox" autocomplete="off"> Malejąco
+                        </label>
+                    </div>
+                    <form class="form-inline my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <ul class="list-group text-dark ">
+                    <li class="list-group-item d-flex justify-content-between  bg-primary my-2">
+
+                        <h4 class="mx-4 text-center">Bitcoin <img src="./images/BTC.png" class="img-fluid"></h4>
+                        <h5>volume <span class="badge badge-primary">32</span></h5>
+                        <h5>Max price <span class="badge badge-success">24100</span></h5>
+                        <h5>Avarage price (24h)<span class="badge badge-info">24000.12</span></h5>
+                        <h5>Min price <span class="badge badge-danger">23888</span></h5>
+                    </li>
+                </ul>
+                <ul class="list-group text-dark" id="cryptoLiContainer">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./bitmarket.js"></script>
+    <script src="./bitbay.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

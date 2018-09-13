@@ -1,0 +1,4 @@
+ul li:hover{
+    transition: 0.2s;
+    background-color: rgb(197, 201, 200) !important;
+}
