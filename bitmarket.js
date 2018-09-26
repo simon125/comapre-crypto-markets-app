@@ -7,7 +7,7 @@ class Bitmarket {
     async getCryptoData(crypto1, crypto2) {
 
 
-        const response = await fetch(`https://www.bitmarket.pl/json/${crypto1}PLN/ticker.json`)
+        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://www.bitmarket.pl/json/${crypto1}PLN/ticker.json`)
         console.log(response)
 
         const responseData = await response.json()
@@ -17,7 +17,7 @@ class Bitmarket {
     }
 
     async getPriceBTC(crypto) {
-        const response = await fetch(`https://bitbay.net/API/Public/BTC${crypto}/all.json`)
+        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://bitbay.net/API/Public/BTC${crypto}/all.json`)
         console.log(response)
         const responseData = await response.json()
         return responseData

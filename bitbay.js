@@ -8,18 +8,14 @@ class Bitbay {
     }
 
     async getCryptoData(crypto1, crypto2) {
-        const response = await fetch(`https://bitbay.net/API/Public/${crypto1}${crypto2}/all.json`, {
-            mode: 'no-cors'
-        })
+        const response = await fetch(`https://bitbay.net/API/Public/${crypto1}${crypto2}/all.json`)
         console.log(response)
         const responseData = await response.json()
         return responseData
     }
 
     async getPriceBTC(crypto) {
-        const response = await fetch(`https://bitbay.net/API/Public/BTC${crypto}/all.json`, {
-            mode: 'no-cors'
-        })
+        const response = await fetch(`https://bitbay.net/API/Public/BTC${crypto}/all.json`)
         console.log(response)
         const responseData = await response.json()
         return responseData
